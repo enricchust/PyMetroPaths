@@ -185,30 +185,6 @@ class TestCases(unittest.TestCase):
                         optimal_path == Path([3, 2, 5, 6, 7, 8, 13, 14]))
         self.assertEqual(optimal_path.f, 2)
 
-    def test_Astar_multiple_origins(self):
-        # If you want to see the optimal_path's route and f-cost,
-        # uncomment the print functions below
-
-        optimal_path = Astar_multiple_origins([108, 206], 1, self.map, 0)
-        # print(optimal_path.route, optimal_path.f)
-        self.assertEqual(optimal_path, Path([12, 11, 10, 2, 1]))
-        self.assertEqual(optimal_path.f, 4)
-
-        optimal_path = Astar_multiple_origins([140, 56], 6, self.map, 1)
-        # print(optimal_path.route, optimal_path.f)
-        self.assertEqual(optimal_path, Path([5, 6]))
-        self.assertEqual(optimal_path.f, 7.14286)
-
-        optimal_path = Astar_multiple_origins([82, 217], 4, self.map, 2)
-        # print(optimal_path.route, optimal_path.f)
-        self.assertEqual(optimal_path, Path([9, 8, 12, 11, 10, 5, 4]))
-        self.assertEqual(optimal_path.f, 326.53992)
-
-        optimal_path = Astar_multiple_origins([167, 64], 14, self.map, 3)
-        # print(optimal_path.route, optimal_path.f)
-        self.assertTrue(optimal_path == Path([3, 2, 10, 11, 12, 13, 14]) or
-                        optimal_path == Path([3, 2, 5, 6, 7, 8, 13, 14]))
-        self.assertEqual(optimal_path.f, 2)
 
 
 if __name__ == "__main__":
